@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+@import 'palette.scss';
+@import 'mixins.scss';
+@import 'responsive.scss';
+
+
+body {
+    font-family: $font;
+    font-size: $font-s;
+    background-color: $bk-color;
+}
+
+.content-cards {
+    max-width: 324px;
+    width: 90%;
+
+    margin: 3rem auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 225px) 250px 225px 385px repeat(2, 225px);
+    gap: 1rem 0;
+   
+}
+
+.card-purple {
+    @include base-card($violet, 5px, 1, 1, 1, 3);
+    background-image: url("../images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: 85% 0%;
+
+    .person {
+        &__img{
+            @include base-avatar( $bk-cardP);
+        }
+    }
+
+    .testimonial-brief {
+        width: 90%;
+        padding-right: 0.5rem;
+    }
+    
+    
+}
+
+.card-gray {
+    @include base-card($grayish-blue, 5px, 1, 1, 3, 4);
+
+    .person {
+        &__img{
+            @include base-avatar( $white );
+        }
+    }
+
+}
+
+.card-Fwhite {
+    @include base-card($border-img, 5px, 1, 1, 4, 5);
+
+    .person {
+        &__img{
+            @include base-avatar($white);
+        }
+    }
+
+    .testimonial-brief {
+        width: 90%;
+        padding-right: 0.5rem;
+    }
+
+}
+
+.card-dark {
+    @include base-card($blackish-blue, 5px, 1, 1, 5, 6);
+
+    .person {
+        &__img{
+            @include base-avatar($violet);
+        }
+    }
+
+    .testimonial-brief {
+        width: 95%;
+        padding-right: 0.5rem;
+    }
+
+}
+
+.card-Swhite {
+    @include base-card($border-img, 5px,1, 1, 6, 8);
+
+    .person {
+        &__img{
+            @include base-avatar( $white);
+        }
+    }
+
+    .testimonial-brief {
+        width: 95%;
+        padding-right: 0.5rem;
+    }
+}
+
+.person {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0.5rem ;
+
+    
+
+    &__info {
+        margin-left: 1rem;
+        .person__cite {
+            
+            &--name {
+                color: $white;
+                font-weight: 500;
+            }
+
+            &--role {
+                color: $c-role;
+            }
+        }
+    }
+
+    &__info--color {
+
+        .person__cite {
+            
+            &--name {
+                color: $grayish-blue;
+            }
+
+            &--role {
+                color: $c-role2;
+            }
+        }
+    } 
+}
+
+.testimonial {
+
+    &-quote {
+        width: 90%;
+        color: white;
+        font-weight: 600;  
+    }
+
+    &-brief {
+        color: $c-role;
+        line-height: 1.2rem;
+    }
+
+    &-quote--color {
+        color:  $grayish-blue;
+    }
+
+    &-brief--color{
+        color:  $c-role2;
+    }
+}
+
+@include desktop(1250px);
+

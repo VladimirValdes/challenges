@@ -1,0 +1,17 @@
+@import 'palette.scss';
+
+@mixin base-card (  $bk-color, $br-radius, $colum1, $colum2, $row1, $row2) {
+    background-color: $bk-color;
+    border-radius: $br-radius;
+    grid-column: #{$colum1}/#{$colum2};
+    grid-row: #{$row1}/#{$row2};
+    padding:  1.5rem 0.5rem 1.5rem 2rem;
+    box-shadow: 0 8px 6px -4px $light-gray;
+}
+
+@mixin base-avatar ($color) {
+    width: 45px;
+    clip-path: circle(25px);
+    border: 2.5px solid $color;
+    border-radius: 50%;
+}
