@@ -9,9 +9,6 @@ I have developed these projects with the goal of improving my skills in the fron
 
 ## Projects
 
-[ :arrow_forward: testimonials-grid-section-main ](https://github.com/VladimirValdes/challenges/new/main?readme=1#testimonials-grid-section-main)
-
-
 ### testimonials-grid-section-main
 
  :white_check_mark: desktop design
