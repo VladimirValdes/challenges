@@ -1,0 +1,515 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-size: 15px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+header {
+  width: 100%;
+  min-height: 95vh;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../images/mobile/image-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header .wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  height: 25vh;
+}
+header .wrapper.active {
+  height: 90vh;
+  background-color: black;
+}
+header .wrapper .top-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+header .wrapper .top-bar .logo-menu {
+  width: 165px;
+  height: 75px;
+  object-fit: contain;
+}
+header .wrapper .top-bar .icon-menu {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  width: 40px;
+  cursor: pointer;
+}
+header .wrapper .top-bar .icon-menu__bar {
+  position: relative;
+  width: 40px;
+  height: 5px;
+  border-radius: 2.5px;
+  background-color: white;
+}
+header .wrapper .top-bar .icon-menu__bar:before, header .wrapper .top-bar .icon-menu__bar:after {
+  content: "";
+  position: absolute;
+  top: -0.7em;
+  display: block;
+  width: 40px;
+  height: 5px;
+  background-color: white;
+  border-radius: 2.5px;
+  transition: transform 0.2s;
+}
+header .wrapper .top-bar .icon-menu__bar:after {
+  top: 0.7em;
+}
+header .wrapper .top-bar .icon-menu__bar--close {
+  height: 0;
+}
+header .wrapper .top-bar .icon-menu__bar--close:before, header .wrapper .top-bar .icon-menu__bar--close:after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+header .wrapper .top-bar .icon-menu__bar--close:after {
+  transform: rotate(45deg);
+}
+header .wrapper .menu {
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  list-style: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: 0.3s ease-out;
+}
+header .wrapper .menu__item {
+  padding: 0.5rem 1rem 0.5rem 0;
+}
+header .wrapper .menu__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: white;
+}
+header .wrapper .menu--show {
+  margin-top: 5.5rem;
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+}
+header .banner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+header .banner__text {
+  max-width: 400px;
+  padding: 1rem;
+  border: 3px solid white;
+  color: white;
+  font-size: 45px;
+  font-weight: 300;
+}
+
+main {
+  margin-top: 8.5rem;
+  margin-bottom: 5.5rem;
+  padding: 0 1rem;
+}
+main .about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5.5rem;
+}
+main .about__img {
+  width: 100%;
+}
+main .about__info {
+  margin-top: 1.5rem;
+  padding: 0 1rem;
+}
+main .about__info .title {
+  text-align: center;
+  font-size: 25px;
+}
+main .about__info .desc {
+  text-align: center;
+  color: #8c8c8c;
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+main .creations {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+main .creations .title {
+  text-align: center;
+  font-size: 25px;
+}
+main .creations .creations__imgs {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 360px));
+  justify-content: center;
+  gap: 1rem;
+}
+main .creations .creations__imgs .img-content {
+  height: 20vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+main .creations .creations__imgs .img-content:hover .img-name {
+  color: black;
+}
+main .creations .creations__imgs .img-content:hover::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+main .creations .creations__imgs .img-content .img-name {
+  position: relative;
+  width: 50%;
+  margin: 0;
+  padding: 3rem 0 1rem 1.5rem;
+  color: white;
+  font-size: 30px;
+}
+main .creations .creations__imgs .img-content:first-child {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../images/mobile/image-deep-earth.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .creations .creations__imgs .img-content:nth-child(2) {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../images/mobile/image-night-arcade.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .creations .creations__imgs .img-content:nth-child(3) {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../images/mobile/image-soccer-team.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .creations .creations__imgs .img-content:nth-child(4) {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../images/mobile/image-grid.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .creations .creations__imgs .img-content:nth-child(4) .img-name {
+  width: 40%;
+}
+main .creations .creations__imgs .img-content:nth-child(5) {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../images/mobile/image-from-above.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .creations .creations__imgs .img-content:nth-child(5) .img-name {
+  width: 65%;
+}
+main .creations .creations__imgs .img-content:nth-child(6) {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../images/mobile/image-pocket-borealis.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .creations .creations__imgs .img-content:nth-child(7) {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../images/mobile/image-curiosity.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .creations .creations__imgs .img-content:nth-child(8) {
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../images/mobile/image-fisheye.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .creations .btn__creation {
+  padding: 15px 50px;
+  background-color: white;
+  border: 2px solid black;
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+main .creations .btn__creation:hover {
+  background-color: black;
+  color: white;
+}
+
+footer {
+  margin-top: auto;
+  padding: 0 1rem;
+  background-color: black;
+}
+footer .container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+footer .container .menu-content {
+  padding-top: 2.5rem;
+}
+footer .container .menu-content .menu {
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-top: 1rem;
+}
+footer .container .menu-content .menu__item {
+  padding: 0.5rem 0 0.5rem 0;
+  text-align: center;
+}
+footer .container .menu-content .menu__link {
+  text-decoration: none;
+  font-family: "Alata", sans-serif;
+  font-size: 16px;
+  color: white;
+}
+footer .container .socials-network {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  width: 100%;
+  text-align: center;
+}
+footer .container .socials-network .icon__network {
+  margin-left: 0.5rem;
+}
+footer .container .socials-network .social__text {
+  margin-top: 2rem;
+  color: #8c8c8c;
+  font-family: "Alata", sans-serif;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../images/desktop/image-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  header .wrapper {
+    flex-direction: row;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  header .wrapper.active {
+    height: 25vh;
+    background-color: transparent;
+  }
+  header .wrapper .top-bar .icon-menu {
+    visibility: hidden;
+    opacity: 0;
+  }
+  header .wrapper nav {
+    margin-left: auto;
+    width: 40%;
+  }
+  header .wrapper nav .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 0;
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+  }
+  header .wrapper nav .menu__item {
+    position: relative;
+    overflow: hidden;
+    padding: 0.5rem 0;
+  }
+  header .wrapper nav .menu__item:after {
+    content: " ";
+    position: absolute;
+    bottom: 1px;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    border-radius: 10px;
+    transition: transform 0.2s;
+    transform: scaleX(0%);
+  }
+  header .wrapper nav .menu__item:hover:after {
+    transform: scaleX(100%);
+  }
+  header .wrapper nav .menu__link {
+    text-transform: none;
+    font-family: "Alata", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+  }
+  header .banner {
+    margin-top: 3rem;
+  }
+  header .banner__text {
+    max-width: 600px;
+    padding: 2.5rem;
+    font-size: 70px;
+    line-height: 4rem;
+  }
+
+  main .about {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  main .about__img {
+    width: 65%;
+  }
+  main .about__info {
+    width: 50%;
+    padding: 1.5rem 2rem 0 4.5rem;
+    background-color: white;
+  }
+  main .about__info .title {
+    text-align: start;
+    font-size: 1.5rem;
+  }
+  main .about__info .desc {
+    text-align: start;
+    margin: 2rem 0 0 0;
+  }
+  main .creations .title {
+    font-size: 30px;
+    order: 1;
+  }
+  main .creations .btn__creation {
+    order: 2;
+    margin-left: auto;
+  }
+  main .creations .creations__imgs {
+    order: 3;
+  }
+
+  footer .container .menu-content {
+    flex: 1 1 250px;
+  }
+  footer .container .menu-content .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+  }
+  footer .container .menu-content .menu__item {
+    position: relative;
+    padding: 0.5rem 0;
+  }
+  footer .container .menu-content .menu__item:after {
+    content: " ";
+    position: absolute;
+    bottom: 1px;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    border-radius: 10px;
+    transition: transform 0.2s;
+    transform: scaleX(0%);
+  }
+  footer .container .menu-content .menu__item:hover:after {
+    transform: scaleX(100%);
+  }
+  footer .container .socials-network {
+    flex: 2 1;
+    margin-left: auto;
+    text-align: end;
+  }
+  footer .container .socials-network .icon__network {
+    position: relative;
+    overflow: hidden;
+    padding: 0.5rem 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  main .about__info {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 4.5rem 2rem 0 4.5rem;
+  }
+  main .about__info .title {
+    font-size: calc(20px + (30 - 20) * ((100vw - 768px) / (1024 - 768)));
+  }
+  main .creations .title {
+    font-size: calc(20px + (30 - 20) * ((100vw - 768px) / (1024 - 768)));
+    order: 1;
+  }
+  main .creations .creations__imgs {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  main .creations .creations__imgs .img-content {
+    height: 80vh;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+  }
+  main .creations .creations__imgs .img-content:first-child {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../images/desktop/image-deep-earth.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  main .creations .creations__imgs .img-content:nth-child(2) {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../images/desktop/image-night-arcade.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  main .creations .creations__imgs .img-content:nth-child(3) {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../images/desktop/image-soccer-team.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  main .creations .creations__imgs .img-content:nth-child(3) .img-name {
+    width: 70%;
+  }
+  main .creations .creations__imgs .img-content:nth-child(4) {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../images/desktop/image-grid.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  main .creations .creations__imgs .img-content:nth-child(5) {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../images/desktop/image-from-above.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  main .creations .creations__imgs .img-content:nth-child(5) .img-name {
+    width: 80%;
+  }
+  main .creations .creations__imgs .img-content:nth-child(6) {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../images/desktop/image-pocket-borealis.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  main .creations .creations__imgs .img-content:nth-child(7) {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../images/desktop/image-curiosity.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  main .creations .creations__imgs .img-content:nth-child(8) {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), url("../images/desktop/image-fisheye.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  main .creations .creations__imgs .img-content:nth-child(8) .img-name {
+    width: 75%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

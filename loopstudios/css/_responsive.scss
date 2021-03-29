@@ -1,0 +1,277 @@
+
+@import 'palette.scss';
+
+@mixin tablet($breakpoint-desktop) {
+    
+    @media screen and(min-width: $breakpoint-desktop) {
+
+        header {
+            @include bk-img('../images/desktop/image-hero.jpg');
+
+            .wrapper {
+                
+                 flex-direction: row;
+                 align-items: center;
+                 max-width: 1100px;
+                 margin: 0 auto;
+                 &.active {
+                    height: 25vh;
+        
+                    background-color: transparent;
+        
+                }
+                
+                 .top-bar {
+
+                    .icon-menu{
+                        visibility: hidden;
+                        opacity: 0;
+                    }
+
+                 }
+              
+                nav {
+                    margin-left: auto;
+                    width: 40%;
+                    
+
+                    .menu {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-evenly;
+                        margin-top: 0;
+            
+                        visibility: visible;
+                        opacity: 1;
+    
+                        transform: translateX(0);
+
+
+                        &__item {
+                            position: relative;
+
+                            overflow: hidden;
+
+                            padding: 0.5rem 0;
+
+                            @include menu-animation();
+
+                           
+                        }
+
+                        
+
+                        &__link {
+                            text-transform: none;
+                            font-family: $Alata;
+                            font-weight: 400;
+                            font-size: 15px;
+                        }
+                    }
+                }
+                
+            }
+
+            .banner {
+                margin-top: 3rem;
+
+                &__text {
+                    max-width: 600px;
+                    padding: 2.5rem;
+                    font-size: 70px;
+                    line-height: 4rem;
+                }
+            }
+        }
+
+
+        main {
+            
+            .about {
+
+                position: relative;
+
+                display: flex;
+                flex-direction: row;
+                max-width: 1100px;
+                margin-left: auto;
+                margin-right: auto;
+
+
+                &__img {
+                    width: 65%;
+                }
+
+                &__info {
+                    
+                    width: 50%;
+                    padding: 1.5rem 2rem 0 4.5rem;
+
+
+                    background-color: $c-white;
+
+                    .title {
+                        text-align: start;
+                        font-size: 1.5rem;
+                    }
+
+                    .desc {
+                        text-align: start;
+                        margin: 2rem 0 0 0;
+                    }
+                }
+
+            }
+
+            .creations {
+
+                .title {
+                    font-size: 30px;
+                    order: 1;
+                }
+
+
+                .btn__creation {
+                    order: 2;
+                    margin-left: auto;
+                }
+
+                .creations__imgs {
+                    order: 3;
+
+                }
+            }
+        }
+        
+        footer {
+
+            .container {
+                .menu-content {
+                    flex: 1 1 250px;
+                    .menu {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        width: 80%;
+
+
+                        &__item {
+                            position: relative;
+
+
+                            padding: 0.5rem 0;
+                            @include menu-animation();
+
+                        }
+                    }
+                }
+
+                .socials-network {
+                    flex: 2 1;
+                    margin-left: auto;
+
+                    text-align: end;
+
+                    .icon__network  {
+                        position: relative;
+                        overflow: hidden;
+                        padding: 0.5rem 0;
+
+
+                       
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin desktop($breakpoint-desktop) {
+    
+    @media screen and(min-width: $breakpoint-desktop) {
+
+
+        main {
+            .about {
+                &__info {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+
+                    padding: 4.5rem 2rem 0 4.5rem;
+
+                    .title {
+                        font-size: calc(20px + (30 - 20) * ((100vw - 768px) / (1024 - 768)));;
+                    }
+                   
+                }
+            }
+
+
+            .creations {
+
+                .title {
+                    font-size: calc(20px + (30 - 20) * ((100vw - 768px) / (1024 - 768)));
+                    order: 1;
+                }
+                .creations__imgs {
+
+                    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+
+                    .img-content {
+                        height: 80vh;
+                        padding-left: 2rem;
+                        padding-bottom: 1rem;
+        
+                        &:first-child {
+                            @include bk-img('../images/desktop/image-deep-earth.jpg');
+        
+                        }
+                        
+                        &:nth-child(2) {
+                            @include bk-img('../images/desktop/image-night-arcade.jpg');
+                        }
+        
+                        &:nth-child(3) {
+                            @include bk-img('../images/desktop/image-soccer-team.jpg');
+
+                            .img-name {
+                                width: 70%;
+                            }
+                        }
+        
+                        &:nth-child(4) {
+                            @include bk-img('../images/desktop/image-grid.jpg');
+        
+                            
+                        }
+        
+                        &:nth-child(5) {
+                            @include bk-img('../images/desktop/image-from-above.jpg');
+                            .img-name {
+                                width: 80%;
+                            }
+                        }
+        
+                        &:nth-child(6) {
+                            @include bk-img('../images/desktop/image-pocket-borealis.jpg');
+                        }
+        
+                        &:nth-child(7) {
+                            @include bk-img('../images/desktop/image-curiosity.jpg');
+                        }
+        
+                        &:nth-child(8) {
+                            @include bk-img('../images/desktop/image-fisheye.jpg');
+                            .img-name {
+                                width: 75%;
+                            }
+                        }
+                     }
+
+                }
+            }
+        }
+    }
+}
