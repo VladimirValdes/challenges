@@ -109,11 +109,11 @@
         transition: transform .2s;
 
 
-        transform: scaleX(0%);
+        transform: scaleX(0);
 
     }
 
     &:hover:after {
-        transform: scaleX(100%);
+        transform: scaleX(100);
     }
 }

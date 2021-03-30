@@ -343,10 +343,10 @@ footer .container .socials-network .social__text {
     background-color: white;
     border-radius: 10px;
     transition: transform 0.2s;
-    transform: scaleX(0%);
+    transform: scaleX(0);
   }
   header .wrapper nav .menu__item:hover:after {
-    transform: scaleX(100%);
+    transform: scaleX(100);
   }
   header .wrapper nav .menu__link {
     text-transform: none;
@@ -423,10 +423,10 @@ footer .container .socials-network .social__text {
     background-color: white;
     border-radius: 10px;
     transition: transform 0.2s;
-    transform: scaleX(0%);
+    transform: scaleX(0);
   }
   footer .container .menu-content .menu__item:hover:after {
-    transform: scaleX(100%);
+    transform: scaleX(100);
   }
   footer .container .socials-network {
     flex: 2 1;
