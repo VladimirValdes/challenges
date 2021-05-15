@@ -1,0 +1,32 @@
+
+
+@mixin tablet($breakpoint-desktop) {
+    
+    @media screen and(min-width: $breakpoint-desktop) {
+        .section-advantages {
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-top: 30;
+            height: 175vh;
+
+            background-image: url('../../images/illustration-editor-desktop.svg');
+            background-position: 200% 20%;
+            background-repeat: no-repeat;
+            // background-size: contain;
+            .img-container {
+                display: none;
+                order: 3;
+                flex: 0 0 50%;
+        
+            }
+        
+            .container {
+                order: 2;
+                flex: 0 0 50%;
+                margin-top: 0;
+                height: 100%;
+        
+            }
+        }
+    }
+}

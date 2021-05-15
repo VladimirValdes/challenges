@@ -1,0 +1,40 @@
+@import './base/reset';
+@import './base/typography';
+@import './abstracts/palette';
+@import './abstracts/mixins';
+
+@import './layout/header';
+@import './layout/section-advantages';
+@import './layout/section-infrastructure';
+@import './layout//section-characteristic';
+@import './layout/footer';
+
+
+html {
+    font-size: 65.5%;
+    font-family: $font1-name;
+    
+}
+
+body {
+    background-color: $bk-body;
+}
+
+main {
+    width: 100%;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 2rem;
+
+    background-color: $bk-footer;
+    border-top-right-radius: 100px;
+
+    text-align: center;
+}

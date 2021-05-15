@@ -1,0 +1,50 @@
+@import '../base/typography';
+@import '../abstracts/palette';
+@import '../abstracts/mixins';
+
+.section-characteristic {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    min-width: 288px;
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    padding: 1rem 2rem;
+
+    text-align: center;
+
+    .title {
+
+        margin-top: 40px;
+
+        color: $color-headings;
+        font-size: 2.5rem;
+        font-weight: 700;
+
+      
+    }
+
+    .description {
+        color: $color-body-text;
+        font-size: 1.5rem;
+        line-height: 2.8rem;
+        font-weight: $w-3;
+    }
+
+    .img-container {
+        width: 100%;
+        max-width: 720px;
+        min-width: 288px;
+        height: 300px;
+        margin-top: 30px;
+
+        background-image: url('../../images/illustration-laptop-mobile.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+}

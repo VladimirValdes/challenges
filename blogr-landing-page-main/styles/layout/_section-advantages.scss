@@ -1,0 +1,83 @@
+@import '../base/typography';
+@import '../abstracts/palette';
+@import '../abstracts/mixins';
+
+@import '../responsive/advantages-responsive';
+
+.section-advantages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-width: 288px;
+    max-width: 1440px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 230px;
+    padding: 1rem 2rem;
+
+    text-align: center;
+
+    border: 1px solid red;
+
+    .title {
+        color: $color-headings;
+        font-size: 2.5rem;
+        font-weight: 700;
+
+        &--init {
+            order: 1;
+            width: 100%;
+            // border: 1px solid red;
+
+        }
+    }
+
+    .description {
+        color: $color-body-text;
+        font-size: 1.5rem;
+        line-height: 2.8rem;
+        font-weight: $w-3;
+    }
+
+    .img-container {
+        order: 2;
+        width: 100%;
+        min-width: 288px;
+
+        height: 250px;
+        margin-top: 30px;
+
+        background-image: url('../../images/illustration-editor-mobile.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        border: 1px solid red;
+    }
+
+    .container {
+        order: 3;
+        width: 100%;
+        min-width: 288px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
+        border: 1px solid red;
+
+
+        article {
+            width: 100%;
+            max-width: 500px;
+            margin-top: 30px;    
+        }
+
+    }
+}
+
+@include tablet(768px);

@@ -1,0 +1,111 @@
+@import '../base/typography';
+@import '../abstracts/palette';
+@import '../abstracts/mixins';
+
+
+@import '../responsive/header-responsive';
+
+
+
+header {
+    width: 100%;
+    min-width: 320px;
+    height: 100vh;
+    background: url('../images/bg-pattern-intro.svg'), linear-gradient(100deg, rgba(255,143,112,1) 0%, rgba(255,61,84,1) 100%);
+    background-position: 45% 55%;
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 100px;
+
+
+    .top-bar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        max-width: 500px;
+        min-width: 288px;
+        margin: 0 auto;
+        padding: 30px 1rem 1rem 1rem;
+
+
+
+        .logo {
+            display: inline-block;
+            width: 8rem;
+            height: 5rem;
+
+            background-image: url('../images/logo.svg');
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+
+        }
+
+        .icon-menu {
+            margin-left: auto;
+            
+            display: flex;
+            flex-direction: column;
+            width: 40px;
+
+            cursor: pointer;
+
+            &__bar {
+                 @include hamburger-icon(40px, 3px, $color-text);
+
+                 
+            }
+        }
+    }
+
+    .section-hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 400px;
+        max-width: 1440px;
+        min-width: 288px;
+        margin: 0 auto;
+        padding: 1rem;
+
+        text-align: center;
+
+
+
+        h1 {
+            font-size: 3.2rem;
+            color: $color-text;
+            font-weight: $w-6;
+        }
+
+        p {
+            font-size: 1.8rem;
+            color: $color-text;
+            font-weight: $w-3;
+        }
+
+        .buttons-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 25px;
+
+
+            .btn-free {
+                @include base-button($color-text, $color-CTA-text, transparent);
+                margin-right: 15px;
+            }
+
+            .btn-learn {
+                @include base-button(transparent, $color-text, $color-text);
+
+            }
+
+        }
+    }
+}
+
+@include tablet(768px);
